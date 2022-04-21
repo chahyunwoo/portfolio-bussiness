@@ -1,8 +1,32 @@
+/* 햄버거 버튼 */
+const btnCall = document.querySelector(".btnCall");
+const menuMo = document.querySelector(".menuMo");
+
+btnCall.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  btnCall.classList.toggle("on");
+  menuMo.classList.toggle("on");
+});
+
+function boardToggle() {
+  const boardTitle = document.querySelectorAll(".boardTitle");
+  
+  boardTitle.forEach((item) => {
+    const boardContent = item.closest("tr").nextElementSibling;
+
+    item.addEventListener("click", function () {
+      boardContent.classList.toggle("active");
+      item.classList.toggle('active');
+    });
+  });
+}
+
+boardToggle();
+
 /* 스크롤 시 애니메이션 효과 */
 const sections = document.querySelectorAll("section");
 const homeBtn = document.querySelector(".homeBtn");
-const identity = document.getElementById("identity");
-const identityBox = identity.querySelectorAll("article");
 
 let posArr = [];
 const sectionEffectPos = -1000;
@@ -17,18 +41,9 @@ window.addEventListener("scroll", (e) => {
 
   sections.forEach((el, index) => {
     if (scroll >= posArr[index] + sectionEffectPos) {
-      // for (let i = 0; i < sections.length; i++) {
-      //   sections[i].classList.remove("on");
-      // }
       sections[index].classList.add("on");
     }
   });
-  scroll > posArr[2] + sectionEffectPos
-    ? identityBox[0].classList.add("on")
-    : null;
-  scroll > posArr[2] + sectionEffectPos + 700
-    ? identityBox[1].classList.add("on")
-    : null;
   scroll > posArr[1] + sectionEffectPos
     ? homeBtn.classList.add("on")
     : homeBtn.classList.remove("on");
@@ -63,14 +78,14 @@ var productSwiper = new Swiper(".productSwiper", {
     disableOnInteraction: false,
   },
   breakpoints: {
+    350: {
+      slidesPerView: 1,
+    },
     640: {
       slidesPerView: 2,
     },
-    768: {
-      slidesPerView: 3,
-    },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 3,
     },
   },
 });
