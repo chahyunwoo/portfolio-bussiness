@@ -17,16 +17,18 @@ a {
 
 button {
   background-color: inherit;
-  border: 0;
+  border: none;
   cursor: pointer;
 }
 
 .hidden {
   position: absolute;
   text-indent: -9999px;
+  opacity: 0;
 }
 
 html,
 body {
+  font-size: 10px;
   overflow-x: hidden;
 }

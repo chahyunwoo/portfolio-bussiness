@@ -1,0 +1,28 @@
+.homeBtn {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  color: $colorPoint;
+  font-weight: bold;
+  left: -3rem;
+  bottom: 3rem;
+  background-color: $colorWhite;
+  border-radius: 50%;
+  border: none;
+  font-size: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+    left: 30px;
+  }
+}

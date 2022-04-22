@@ -1,0 +1,15 @@
+.mousePointer {
+  width: 5vmax;
+  height: 5vmax;
+  background-color: $colorWhite;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  will-change: transform;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  pointer-events: none;
+  transition: 0.08s;
+}
