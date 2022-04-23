@@ -1,4 +1,4 @@
-#visual {
+.visual {
   font-family: $fontDefault;
   width: 100%;
   height: calc(100vh - 12rem);
@@ -90,7 +90,7 @@
   }
 }
 
-#feature {
+.feature {
   width: 100%;
   background: $colorGray
     url("https://www.transparenttextures.com/patterns/snow.png") fixed;
@@ -154,6 +154,7 @@
             color: $colorWhite;
             font-size: 2.4rem;
             transition: 0.35s;
+            font-weight: 300;
           }
         }
 
@@ -161,6 +162,7 @@
           margin-top: 3%;
           color: $colorWhite;
           font-size: 1.6rem;
+          font-weight: 100;
         }
       }
     }
@@ -184,7 +186,7 @@
   }
 }
 
-#identity {
+.identity {
   width: 100%;
   background-color: $colorGray;
   padding: 10rem 0;
@@ -284,6 +286,7 @@
                 font-size: 1.4rem;
                 padding-top: 0.5em;
                 line-height: 1.2;
+                font-weight: 300;
               }
             }
           }
@@ -313,7 +316,7 @@
   }
 }
 
-#product {
+.product {
   width: 100%;
   background-color: $colorBlack;
   padding: 10rem 0;
@@ -383,7 +386,7 @@
   }
 }
 
-#policy {
+.policy {
   width: 100%;
   background-color: $colorBlack;
   padding: 10rem 0;
@@ -532,6 +535,7 @@
                 padding: 1.875em 0;
                 line-height: 1.4;
                 text-align: left;
+                font-weight: 300;
               }
             }
           }
@@ -546,7 +550,7 @@
 }
 
 @include tablet {
-  #visual {
+  .visual {
     height: calc(100vh - 10rem);
 
     .inner {
@@ -575,7 +579,7 @@
     }
   }
 
-  #feature {
+  .feature {
     padding: 10rem 3rem;
 
     .inner {
@@ -598,7 +602,7 @@
     }
   }
 
-  #identity {
+  .identity {
     padding: 10rem 3rem;
 
     .identityBgBlack {
@@ -661,7 +665,7 @@
     }
   }
 
-  #product {
+  .product {
     padding: 10rem 3rem;
 
     .inner {
@@ -669,7 +673,7 @@
     }
   }
 
-  #policy {
+  .policy {
     padding: 10rem 3rem;
 
     .policyPointBg {
@@ -743,7 +747,7 @@
 }
 
 @include mobile {
-  #feature {
+  .feature {
     .inner {
       .wrap {
         article {
@@ -766,7 +770,7 @@
     }
   }
 
-  #identity {
+  .identity {
     .identityBgBlack {
       .pointBgOrange {
         display: none;
@@ -795,7 +799,7 @@
     }
   }
 
-  #policy {
+  .policy {
     .inner {
       .wrap {
         .pic {

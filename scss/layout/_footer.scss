@@ -1,4 +1,4 @@
-#footer {
+.footer {
   font-family: $fontNav;
   width: 100%;
   padding: 10rem 0;
@@ -53,7 +53,7 @@
 }
 
 @include tablet {
-  #footer {
+  .footer {
     padding: 10rem 3rem;
 
     .inner {
@@ -63,7 +63,7 @@
 }
 
 @include mobile {
-  #footer {
+  .footer {
     .inner {
       .footerTop {
         flex-wrap: wrap;
