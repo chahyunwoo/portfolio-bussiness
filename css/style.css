@@ -256,6 +256,11 @@ h2 {
   z-index: 9;
   transition: 0.35s;
 }
+.header .inner .menuMo:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .header .inner .menuMo.on {
   right: 0;
 }
@@ -274,6 +279,39 @@ h2 {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: center;
+}
+.header .inner .menuMo #gnbMoLogin {
+  margin-top: 3rem;
+  float: right;
+}
+.header .inner .menuMo #gnbMoLogin:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header .inner .menuMo #gnbMoLogin li {
+  float: left;
+  margin-right: 2rem;
+  position: relative;
+}
+.header .inner .menuMo #gnbMoLogin li:last-of-type {
+  margin-right: 0;
+}
+.header .inner .menuMo #gnbMoLogin li:last-of-type:after {
+  display: none;
+}
+.header .inner .menuMo #gnbMoLogin li:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1rem;
+  transform: translateY(0.4rem);
+  background-color: #fff;
+  margin-left: 1rem;
+}
+.header .inner .menuMo #gnbMoLogin li a {
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 1179px) {
@@ -361,6 +399,426 @@ h2 {
   }
   .footer .inner .footerTop ul {
     margin: 0 auto;
+  }
+}
+.communityVisual {
+  width: 100%;
+  background: linear-gradient(-372.3deg, #0f0f0f 50%, #262626 50%);
+}
+.communityVisual .inner {
+  width: 1180px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  border-bottom: 5px solid #fff;
+}
+.communityVisual .inner .desc {
+  width: 60%;
+  padding-top: 3rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+.communityVisual .inner .title {
+  margin-top: 15rem;
+  font-size: 8rem;
+  color: #fff;
+  font-weight: 300;
+}
+.communityVisual .inner .subTitle {
+  color: #fff;
+  font-size: 4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.communityVisual .inner .deco {
+  position: absolute;
+  color: #fff;
+  top: 14rem;
+  right: -10rem;
+  transform: rotate(90deg);
+  font-size: 3rem;
+}
+.communityVisual .inner .deco em {
+  font-style: normal;
+  color: #d94423;
+  font-size: 4rem;
+}
+
+.community {
+  width: 100%;
+  background-color: #0f0f0f;
+  padding-bottom: 10rem;
+}
+.community .inner {
+  width: 1180px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.community .inner h1 {
+  color: #fff;
+  font-size: 8rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 5rem 0;
+}
+.community .inner .tableWeb {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 5rem;
+  border-collapse: collapse;
+}
+.community .inner .tableWeb thead {
+  display: none;
+}
+.community .inner .tableWeb thead tr th:nth-of-type(1) {
+  width: 5%;
+}
+.community .inner .tableWeb thead tr th:nth-of-type(3) {
+  width: 10%;
+}
+.community .inner .tableWeb thead tr th:nth-of-type(4) {
+  width: 10%;
+}
+.community .inner .tableWeb thead tr th:nth-of-type(5) {
+  width: 12%;
+}
+.community .inner .tableWeb tbody .title {
+  height: 10rem;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.community .inner .tableWeb tbody .title:last-of-type {
+  border: none;
+}
+.community .inner .tableWeb tbody .title .boardTitle {
+  text-align: left;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+.community .inner .tableWeb tbody .title .boardTitle.active {
+  font-weight: bold;
+}
+.community .inner .tableWeb tbody .title td i {
+  margin-right: 1rem;
+  color: #aaa;
+}
+.community .inner .tableWeb tbody .title td span {
+  color: #fff;
+  font-size: 16px;
+}
+.community .inner .tableWeb tbody .content {
+  visibility: collapse;
+}
+.community .inner .tableWeb tbody .content td {
+  padding: 2rem 5rem;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.community .inner .tableWeb tbody .content.active {
+  visibility: visible;
+  border-bottom: 1px solid #fff;
+}
+.community .inner .pagination {
+  width: 100%;
+  text-align: center;
+}
+.community .inner .pagination:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.community .inner .pagination .prev {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  float: left;
+}
+.community .inner .pagination .prev:hover:before {
+  top: 0;
+  transform: rotate(-180deg);
+  transform-origin: center center;
+}
+.community .inner .pagination .prev:hover:after {
+  top: 100%;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+.community .inner .pagination .prev:hover strong {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.community .inner .pagination .prev:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  transform-origin: left center;
+  transition: 0.35s;
+  transform: rotate(-30deg);
+}
+.community .inner .pagination .prev:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  transform-origin: left center;
+  transition: 0.35s;
+  transform: rotate(30deg);
+}
+.community .inner .pagination .prev strong {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(100%, -50%);
+  transition: 0.35s;
+}
+.community .inner .pagination .numbers {
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+}
+.community .inner .pagination .numbers a {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #fff;
+  margin: 0 0.5rem;
+  transition: 0.35s;
+}
+.community .inner .pagination .numbers a:hover {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: #0f0f0f;
+}
+.community .inner .pagination .next {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  float: right;
+}
+.community .inner .pagination .next:hover:before {
+  top: 0;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+.community .inner .pagination .next:hover:after {
+  top: 100%;
+  transform: rotate(-180deg);
+  transform-origin: center center;
+}
+.community .inner .pagination .next:hover strong {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.community .inner .pagination .next:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  right: 0;
+  transform-origin: right center;
+  transition: 0.35s;
+  transform: rotate(30deg);
+}
+.community .inner .pagination .next:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  right: 0;
+  transform-origin: right center;
+  transition: 0.35s;
+  transform: rotate(-30deg);
+}
+.community .inner .pagination .next strong {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-150%, -50%);
+  transition: 0.35s;
+}
+.community .inner .tableMo {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 5rem;
+  border-collapse: collapse;
+  display: none;
+}
+.community .inner .tableMo thead {
+  display: none;
+}
+.community .inner .tableMo thead tr th:nth-of-type(1) {
+  width: 100%;
+}
+.community .inner .tableMo tbody .title {
+  height: 10rem;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.community .inner .tableMo tbody .title:last-of-type {
+  border: none;
+}
+.community .inner .tableMo tbody .title .boardTitle {
+  text-align: center;
+  cursor: pointer;
+}
+.community .inner .tableMo tbody .title .boardTitle.active {
+  font-weight: bold;
+}
+.community .inner .tableMo tbody .title td span {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.community .inner .tableMo tbody .content {
+  visibility: collapse;
+}
+.community .inner .tableMo tbody .content td p {
+  padding: 2rem 5rem;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.community .inner .tableMo tbody .content td p .info {
+  display: block;
+  padding-bottom: 2rem;
+  font-size: 0;
+}
+.community .inner .tableMo tbody .content td p .info .writer {
+  display: inline-block;
+  width: 33.3333333333%;
+  font-size: 1.2rem;
+}
+.community .inner .tableMo tbody .content td p .info .writer i {
+  margin-right: 1rem;
+}
+.community .inner .tableMo tbody .content td p .info .view {
+  display: inline-block;
+  width: 33.3333333333%;
+  font-size: 1.2rem;
+}
+.community .inner .tableMo tbody .content td p .info .view i {
+  margin-right: 1rem;
+}
+.community .inner .tableMo tbody .content td p .info .date {
+  display: inline-block;
+  width: 33.3333333333%;
+  font-size: 1.2rem;
+}
+.community .inner .tableMo tbody .content td p .info .date i {
+  margin-right: 1rem;
+}
+.community .inner .tableMo tbody .content.active {
+  visibility: visible;
+  border-bottom: 1px solid #fff;
+}
+.community .inner .paginationMo {
+  display: none;
+  padding-bottom: 5rem;
+}
+.community .inner .paginationMo:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.community .inner .paginationMo .prev {
+  float: left;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.community .inner .paginationMo .next {
+  float: right;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 1179px) {
+  .communityVisual {
+    padding: 0 3rem;
+  }
+  .communityVisual .inner {
+    width: 100%;
+  }
+  .communityVisual .inner .title {
+    padding-bottom: 2rem;
+  }
+
+  .community {
+    padding: 0 3rem;
+  }
+  .community .inner {
+    width: 100%;
+  }
+  .community .inner .tableWeb {
+    display: none;
+  }
+  .community .inner .pagination {
+    display: none;
+  }
+  .community .inner .tableMo {
+    display: block;
+  }
+  .community .inner .tableMo tbody .title td span {
+    font-size: 3vmin;
+  }
+  .community .inner .tableMo tbody .content td p {
+    font-size: 2.5vmin;
+  }
+  .community .inner .paginationMo {
+    display: block;
+  }
+}
+@media (max-width: 539px) {
+  .communityVisual {
+    padding: 0 3rem;
+  }
+  .communityVisual .inner {
+    width: 100%;
+  }
+  .communityVisual .inner .title {
+    padding-bottom: 2rem;
+    font-size: 6.5rem;
+  }
+
+  .community .inner .tableMo tbody .title td span {
+    font-size: 3.5vmin;
+  }
+  .community .inner .tableMo tbody .content td p {
+    font-size: 3vmin;
   }
 }
 .visual {
@@ -1077,7 +1535,7 @@ h2 {
   font-weight: 100;
 }
 .membersVisual .inner .title {
-  margin-top: 150px;
+  margin-top: 15rem;
   font-size: 8rem;
   color: #fff;
   font-weight: 300;

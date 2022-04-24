@@ -172,6 +172,7 @@
       padding: 5rem 3rem;
       z-index: 9;
       transition: 0.35s;
+      @include clear;
 
       &.on {
         right: 0;
@@ -195,6 +196,41 @@
             font-family: $fontNav;
             color: $colorWhite;
             text-align: center;
+          }
+        }
+      }
+
+      #gnbMoLogin {
+        @include clear;
+        margin-top: 3rem;
+        float: right;
+
+        li {
+          float: left;
+          margin-right: 2rem;
+          position: relative;
+          
+          &:last-of-type {
+            margin-right: 0;
+
+            &:after {
+              display: none;
+            }
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 1rem;
+            transform: translateY(0.4rem);
+            background-color: $colorWhite;
+            margin-left: 1rem;
+          }
+
+          a {
+            color: $colorWhite;
+            font-size: 1.4rem;
           }
         }
       }

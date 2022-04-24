@@ -1,0 +1,527 @@
+.communityVisual {
+  width: 100%;
+  background: linear-gradient(-372.3deg, $colorBlack 50%, $colorGray 50%);
+
+  .inner {
+    @include inner;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    border-bottom: 5px solid $colorWhite;
+
+    .desc {
+      width: 60%;
+      padding-top: 3rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: $colorWhite;
+      font-family: $fontDefault;
+      font-weight: 100;
+    }
+
+    .title {
+      margin-top: 15rem;
+      font-size: $fzVisualTitle;
+      color: $colorWhite;
+      font-weight: 300;
+    }
+
+    .subTitle {
+      color: $colorWhite;
+      font-size: 4rem;
+      font-family: $fontDefault;
+      font-weight: 300;
+    }
+
+    .deco {
+      position: absolute;
+      color: $colorWhite;
+      top: 14rem;
+      right: -10rem;
+      transform: rotate(90deg);
+      font-size: 3rem;
+
+      em {
+        font-style: normal;
+        color: $colorPoint;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+.community {
+  width: 100%;
+  background-color: $colorBlack;
+  padding-bottom: 10rem;
+
+  .inner {
+    @include inner;
+
+    h1 {
+      color: $colorWhite;
+      font-size: $fzVisualTitle;
+      font-weight: 300;
+      text-align: center;
+      padding: 5rem 0;
+    }
+
+    .tableWeb {
+      width: 100%;
+      border-bottom: 2px solid $colorWhite;
+      margin-bottom: 5rem;
+      border-collapse: collapse;
+
+      thead {
+        display: none;
+
+        tr {
+          th {
+            &:nth-of-type(1) {
+              width: 5%;
+            }
+            &:nth-of-type(3) {
+              width: 10%;
+            }
+            &:nth-of-type(4) {
+              width: 10%;
+            }
+            &:nth-of-type(5) {
+              width: 12%;
+            }
+          }
+        }
+      }
+
+      tbody {
+        .title {
+          height: 10rem;
+          text-align: center;
+          border-bottom: 1px solid $colorWhite;
+          font-family: $fontDefault;
+          font-weight: 300;
+
+          &:last-of-type {
+            border: none;
+          }
+
+          .boardTitle {
+            text-align: left;
+            padding-left: 2rem;
+            cursor: pointer;
+
+            &.active {
+              font-weight: bold;
+            }
+          }
+
+          td {
+            i {
+              margin-right: 1rem;
+              color: #aaa;
+            }
+            span {
+              color: $colorWhite;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .content {
+          visibility: collapse;
+
+          td {
+            padding: 2rem 5rem;
+            color: $colorWhite;
+            line-height: 1.6;
+            font-size: 1.6rem;
+            font-family: $fontDefault;
+            font-weight: 300;
+          }
+
+          &.active {
+            visibility: visible;
+            border-bottom: 1px solid $colorWhite;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      width: 100%;
+      text-align: center;
+      @include clear;
+
+      .prev {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        float: left;
+
+        &:hover {
+          &:before {
+            top: 0;
+            transform: rotate(-180deg);
+            transform-origin: center center;
+          }
+
+          &:after {
+            top: 100%;
+            transform: rotate(180deg);
+            transform-origin: center center;
+          }
+
+          strong {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $colorWhite;
+          top: 50%;
+          left: 0;
+          transform-origin: left center;
+          transition: 0.35s;
+          transform: rotate(-30deg);
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $colorWhite;
+          top: 50%;
+          left: 0;
+          transform-origin: left center;
+          transition: 0.35s;
+          transform: rotate(30deg);
+        }
+
+        strong {
+          font-weight: normal;
+          font-size: 1.2rem;
+          color: $colorWhite;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          opacity: 0;
+          transform: translate(100%, -50%);
+          transition: 0.35s;
+        }
+      }
+
+      .numbers {
+        display: inline-block;
+        text-align: center;
+        font-size: 0;
+
+        a {
+          display: inline-block;
+          font-family: $fontNav;
+          width: 3rem;
+          height: 3rem;
+          font-size: 1.4rem;
+          line-height: 3rem;
+          color: $colorWhite;
+          margin: 0 0.5rem;
+          transition: 0.35s;
+
+          &:hover {
+            background-color: $colorWhite;
+            border-radius: 0.5rem;
+            color: $colorBlack;
+          }
+        }
+      }
+
+      .next {
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        float: right;
+
+        &:hover {
+          &:before {
+            top: 0;
+            transform: rotate(180deg);
+            transform-origin: center center;
+          }
+
+          &:after {
+            top: 100%;
+            transform: rotate(-180deg);
+            transform-origin: center center;
+          }
+
+          strong {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $colorWhite;
+          top: 50%;
+          right: 0;
+          transform-origin: right center;
+          transition: 0.35s;
+          transform: rotate(30deg);
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: $colorWhite;
+          top: 50%;
+          right: 0;
+          transform-origin: right center;
+          transition: 0.35s;
+          transform: rotate(-30deg);
+        }
+
+        strong {
+          font-weight: normal;
+          font-size: 1.2rem;
+          color: $colorWhite;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          opacity: 0;
+          transform: translate(-150%, -50%);
+          transition: 0.35s;
+        }
+      }
+    }
+
+    .tableMo {
+      width: 100%;
+      border-bottom: 2px solid $colorWhite;
+      margin-bottom: 5rem;
+      border-collapse: collapse;
+      display: none;
+
+      thead {
+        display: none;
+
+        tr {
+          th {
+            &:nth-of-type(1) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      tbody {
+        .title {
+          height: 10rem;
+          text-align: center;
+          border-bottom: 1px solid $colorWhite;
+          font-family: $fontDefault;
+          font-weight: 300;
+
+          &:last-of-type {
+            border: none;
+          }
+
+          .boardTitle {
+            text-align: center;
+            cursor: pointer;
+
+            &.active {
+              font-weight: bold;
+            }
+          }
+
+          td {
+            span {
+              color: $colorWhite;
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        .content {
+          visibility: collapse;
+
+          td {
+            p {
+              padding: 2rem 5rem;
+              color: $colorWhite;
+              line-height: 1.6;
+              font-size: 1.6rem;
+              font-family: $fontDefault;
+              font-weight: 300;
+
+              .info {
+                display: block;
+                padding-bottom: 2rem;
+                font-size: 0;
+
+                .writer {
+                  display: inline-block;
+                  width: calc(100% / 3);
+                  font-size: 1.2rem;
+
+                  i {
+                    margin-right: 1rem;
+                  }
+                }
+
+                .view {
+                  display: inline-block;
+                  width: calc(100% / 3);
+                  font-size: 1.2rem;
+
+                  i {
+                    margin-right: 1rem;
+                  }
+                }
+
+                .date {
+                  display: inline-block;
+                  width: calc(100% / 3);
+                  font-size: 1.2rem;
+
+                  i {
+                    margin-right: 1rem;
+                  }
+                }
+              }
+            }
+          }
+
+          &.active {
+            visibility: visible;
+            border-bottom: 1px solid $colorWhite;
+          }
+        }
+      }
+    }
+
+    .paginationMo {
+      @include clear;
+      display: none;
+      padding-bottom: 5rem;
+
+      .prev {
+        float: left;
+        font-size: 1.5rem;
+        color: $colorWhite;
+      }
+
+      .next {
+        float: right;
+        font-size: 1.5rem;
+        color: $colorWhite;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .communityVisual {
+    padding: 0 3rem;
+
+    .inner {
+      width: 100%;
+
+      .title {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .community {
+    padding: 0 3rem;
+
+    .inner {
+      width: 100%;
+
+      .tableWeb {
+        display: none;
+      }
+
+      .pagination {
+        display: none;
+      }
+
+      .tableMo {
+        display: block;
+
+        tbody {
+          .title {
+            td {
+              span {
+                font-size: 3vmin;
+              }
+            }
+          }
+
+          .content {
+            td {
+              p {
+                font-size: 2.5vmin;
+              }
+            }
+          }
+        }
+      }
+
+      .paginationMo {
+        display: block;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .communityVisual {
+    padding: 0 3rem;
+
+    .inner {
+      width: 100%;
+
+      .title {
+        padding-bottom: 2rem;
+        font-size: 6.5rem;
+      }
+    }
+  }
+
+  .community {
+    .inner {
+      .tableMo {
+        tbody {
+          .title {
+            td {
+              span {
+                font-size: 3.5vmin;
+              }
+            }
+          }
+
+          .content {
+            td {
+              p {
+                font-size: 3vmin;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
