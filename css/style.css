@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -1103,13 +1104,264 @@ h2 {
 
 .members {
   width: 100%;
-  height: 500px;
   background-color: #0f0f0f;
 }
 .members .inner {
   width: 1180px;
   max-width: 100%;
   margin: 0 auto;
+}
+.members .inner .wrap {
+  padding-top: 10rem;
+}
+.members .inner .wrap .member {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0;
+  padding-bottom: 10rem;
+}
+.members .inner .wrap .member:hover .desc h3 {
+  color: #d94423;
+}
+.members .inner .wrap .member:hover .desc p span {
+  width: 100%;
+}
+.members .inner .wrap .member .pic {
+  display: inline-block;
+  width: 30%;
+  font-size: 0;
+}
+.members .inner .wrap .member .pic .card {
+  color: #d94423;
+  writing-mode: tb-rl;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  width: 6%;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+}
+.members .inner .wrap .member .pic .imgWrap {
+  display: inline-block;
+  width: 90%;
+}
+.members .inner .wrap .member .pic .imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+.members .inner .wrap .member .desc {
+  width: 70%;
+  display: inline-block;
+  font-size: 0;
+}
+.members .inner .wrap .member .desc h3 {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  transition: 0.35s;
+}
+.members .inner .wrap .member .desc p {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.members .inner .wrap .member .desc p span {
+  display: block;
+  margin: 2rem 0;
+  width: 0;
+  height: 3rem;
+  background-color: #d94423;
+  transition: 0.5s;
+}
+.members .inner .wrap .member.memberLeft .desc {
+  padding-left: 2rem;
+}
+.members .inner .wrap .member.memberRight .desc {
+  padding-right: 2rem;
+}
+
+.membersMo {
+  display: none;
+  background-color: #0f0f0f;
+  padding: 10rem 3rem;
+}
+.membersMo .inner {
+  width: 100%;
+}
+.membersMo .inner .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.membersMo .inner .wrap .card {
+  width: 48%;
+  margin-bottom: 5%;
+}
+.membersMo .inner .wrap .card .pic {
+  max-width: 26rem;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  font-size: 0;
+  position: relative;
+}
+.membersMo .inner .wrap .card .pic:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 3rem;
+  width: 70%;
+  height: 2px;
+  background-color: #d94423;
+  opacity: 0.6;
+}
+.membersMo .inner .wrap .card .pic:after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+  width: 80%;
+  height: 4rem;
+  background-color: #d94423;
+  opacity: 0.6;
+  font-size: 2.6rem;
+  line-height: 4.5rem;
+  text-align: center;
+  color: #fff;
+  font-family: "Sacramento", cursive;
+}
+.membersMo .inner .wrap .card .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+.membersMo .inner .wrap .card .desc {
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.membersMo .inner .wrap .card .desc h3 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.membersMo .inner .wrap .card .desc a {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  transition: 0.35s;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+.membersMo .inner .wrap .card .desc a:hover {
+  background-color: #d94423;
+  border: 1px solid #d94423;
+}
+
+.membersMoModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+  z-index: 9999;
+}
+.membersMoModal.on {
+  opacity: 1;
+  visibility: visible;
+}
+.membersMoModal .overlay {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  background-color: #0f0f0f;
+}
+.membersMoModal .modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80vh;
+  opacity: 1;
+  background-color: #262626;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
+  padding: 3rem;
+}
+.membersMoModal .modalBox h1 {
+  color: #fff;
+  font-size: 5vmin;
+  border-bottom: 1px solid #d94423;
+  padding-bottom: 2rem;
+}
+.membersMoModal .modalBox p {
+  color: #fff;
+  padding-top: 3rem;
+  font-size: 2.7vmin;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+.membersMoModal .modalBox .modalClose {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  font-size: 2.6rem;
+  color: #fff;
+}
+
+@media (max-width: 1179px) {
+  .membersVisual {
+    padding: 0 3rem;
+  }
+  .membersVisual .inner {
+    width: 100%;
+  }
+  .membersVisual .inner .title {
+    padding-bottom: 2rem;
+  }
+
+  .members {
+    display: none;
+  }
+
+  .membersMo {
+    display: block;
+  }
+}
+@media (max-width: 539px) {
+  .membersVisual .inner {
+    padding-bottom: 3rem;
+  }
+  .membersVisual .inner .title {
+    padding-bottom: 3rem;
+  }
+
+  .membersMo {
+    padding: 3rem 3rem;
+  }
+  .membersMo .inner .wrap .card {
+    width: 100%;
+  }
+
+  .membersMoModal .modalBox p {
+    font-size: 2.9vmin;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

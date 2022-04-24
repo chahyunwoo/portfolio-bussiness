@@ -32,7 +32,7 @@
       font-family: $fontDefault;
       font-weight: 300;
     }
-    
+
     .deco {
       position: absolute;
       color: $colorWhite;
@@ -52,10 +52,300 @@
 
 .members {
   width: 100%;
-  height: 500px;
   background-color: $colorBlack;
 
   .inner {
     @include inner;
+
+    .wrap {
+      padding-top: 10rem;
+
+      .member {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0;
+        padding-bottom: 10rem;
+
+        &:hover {
+          .desc {
+            h3 {
+              color: $colorPoint;
+            }
+
+            p {
+              span {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .pic {
+          display: inline-block;
+          width: 30%;
+          font-size: 0;
+
+          .card {
+            color: $colorPoint;
+            writing-mode: tb-rl;
+            display: inline-block;
+            letter-spacing: 1.5px;
+            width: 6%;
+            font-size: 1.6rem;
+            font-family: $fontDefault;
+          }
+
+          .imgWrap {
+            display: inline-block;
+            width: 90%;
+
+            img {
+              @include objectFit;
+            }
+          }
+        }
+
+        .desc {
+          width: 70%;
+          display: inline-block;
+          font-size: 0;
+
+          h3 {
+            font-family: "Raleway", sans-serif;
+            color: $colorWhite;
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            transition: 0.35s;
+          }
+
+          p {
+            font-family: $fontDefault;
+            color: $colorWhite;
+            font-size: 2rem;
+            font-weight: 100;
+
+            span {
+              display: block;
+              margin: 2rem 0;
+              width: 0;
+              height: 3rem;
+              background-color: $colorPoint;
+              transition: 0.5s;
+            }
+          }
+        }
+
+        &.memberLeft {
+          .desc {
+            padding-left: 2rem;
+          }
+        }
+
+        &.memberRight {
+          .desc {
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.membersMo {
+  display: none;
+  background-color: $colorBlack;
+  padding: 10rem 3rem;
+
+  .inner {
+    width: 100%;
+
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2%;
+      
+      .card {
+        width: 48%;
+        margin-bottom: 5%;
+
+        .pic {
+          max-width: 26rem;
+          margin: 0 auto;
+          overflow: hidden;
+          border-radius: 1rem;
+          font-size: 0;
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 3rem;
+            width: 70%;
+            height: 2px;
+            background-color: $colorPoint;
+            opacity: 0.6;
+          }
+
+          &:after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: 4rem;
+            right: 0;
+            width: 80%;
+            height: 4rem;
+            background-color: $colorPoint;
+            opacity: 0.6;
+            font-size: 2.6rem;
+            line-height: 4.5rem;
+            text-align: center;
+            color: $colorWhite;
+            font-family: 'Sacramento', cursive;
+          }
+
+          img {
+            @include objectFit;
+          }
+        }
+
+        .desc {
+          width: 100%;
+          margin-top: 1.5rem;
+          text-align: center;
+
+          h3 {
+            color: $colorWhite;
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 300;
+          }
+
+          a {
+            @include btn();
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.membersMoModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: .35s;
+  z-index: 9999;
+
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    background-color: $colorBlack;
+  }
+
+  .modalBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80vh;
+    opacity: 1;
+    background-color: $colorGray;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+
+    h1 {
+      color: $colorWhite;
+      font-size: 5vmin;
+      border-bottom: 1px solid $colorPoint;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      color: $colorWhite;
+      padding-top: 3rem;
+      font-size: 2.7vmin;
+      font-family: $fontDefault;
+      font-weight: 300;
+    }
+
+    .modalClose {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      font-size: 2.6rem;
+      color: $colorWhite;
+    }
+  }
+}
+
+@include tablet {
+  .membersVisual {
+    padding: 0 3rem;
+
+    .inner {
+      width: 100%;
+
+      .title {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .members {
+    display: none;
+  }
+
+  .membersMo {
+    display: block;
+  }
+}
+
+@include mobile {
+  .membersVisual {
+    .inner {
+      padding-bottom: 3rem;
+
+      .title {
+        padding-bottom: 3rem;
+      }
+    }
+  }
+
+  .membersMo {
+    padding: 3rem 3rem;
+
+    .inner {
+      .wrap {
+        .card {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .membersMoModal {
+    .modalBox {
+      p {
+        font-size: 2.9vmin;
+      }
+    }
   }
 }
