@@ -9,21 +9,6 @@ btnCall.addEventListener("click", function (e) {
   menuMo.classList.toggle("on");
 });
 
-function boardToggle() {
-  const boardTitle = document.querySelectorAll(".boardTitle");
-  
-  boardTitle.forEach((item) => {
-    const boardContent = item.closest("tr").nextElementSibling;
-
-    item.addEventListener("click", function () {
-      boardContent.classList.toggle("active");
-      item.classList.toggle('active');
-    });
-  });
-}
-
-boardToggle();
-
 /* 스크롤 시 애니메이션 효과 */
 const sections = document.querySelectorAll("section");
 const homeBtn = document.querySelector(".homeBtn");
