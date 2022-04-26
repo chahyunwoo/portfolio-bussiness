@@ -4,6 +4,7 @@
   background-color: $colorBlack;
   overflow: hidden;
   position: relative;
+  padding: 10rem;
 }
 
 .joinBox {
@@ -129,6 +130,7 @@
                       width: 50%;
                       font-size: 2rem;
                       color: $colorWhite;
+                      font-weight: 100;
                       text-align: center;
                       cursor: pointer;
                       position: relative;
@@ -181,6 +183,7 @@
                       position: relative;
                       cursor: pointer;
                       font-size: 2rem;
+                      font-weight: 100;
                       color: $colorWhite;
                       width: 25%;
                       text-align: center;
@@ -193,7 +196,6 @@
                         line-height: 1.5rem;
                         vertical-align: middle;
                         background-color: $colorWhite;
-                        border: 1px solid #000;
                         margin-right: 1rem;
                         transform: translateY(-0.2rem);
                         transition: 0.35s;
@@ -214,6 +216,267 @@
         float: right;
         cursor: pointer;
         font-size: 2rem;
+      }
+    }
+  }
+}
+
+.joinBoxMo {
+  width: 100%;
+  display: none;
+
+  h1 {
+    font-size: 8rem;
+    color: $colorWhite;
+    font-weight: 200;
+    text-align: center;
+    margin: 5rem 0;
+  }
+
+  form {
+    text-align: center;
+    padding: 5rem 0;
+
+    fieldset {
+      display: none;
+    }
+
+    ul {
+      li {
+        h2 {
+          font-size: 2.6rem;
+          color: $colorWhite;
+          margin-bottom: 2.5rem;
+          font-family: $fontDefault;
+          font-weight: 100;
+
+          &.genderTitle {
+            &.error {
+              color: $colorPoint;
+            }
+          }
+
+          &.interestTitle {
+            &.error {
+              color: $colorPoint;
+            }
+          }
+        }
+
+        input {
+          margin-bottom: 5rem;
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $colorWhite;
+          color: $colorWhite;
+          padding-left: 2rem;
+          outline: none;
+          height: 4rem;
+
+          &.error {
+            border-bottom: 1px solid $colorPoint;
+          }
+
+          &:focus {
+            &::placeholder {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+
+          &::placeholder {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.35s;
+          }
+        }
+
+        .genderRadio {
+          font-size: 0;
+
+          .radioBtn {
+            position: relative;
+
+            input[type="radio"] {
+              position: absolute;
+              padding: 0;
+              width: 0;
+              height: 0;
+              overflow: hidden;
+              bottom: 0;
+
+              &:checked {
+                & + label {
+                  &:before {
+                    content: "";
+                    background-color: $colorPoint;
+                    border-radius: 50%;
+                  }
+                }
+              }
+
+              & + label {
+                display: inline-block;
+                width: 50%;
+                font-size: 2rem;
+                color: $colorWhite;
+                text-align: center;
+                position: relative;
+                cursor: pointer;
+
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  vertical-align: middle;
+                  width: 2rem;
+                  height: 2rem;
+                  line-height: 2rem;
+                  text-align: center;
+                  background-color: $colorWhite;
+                  border-radius: 50%;
+                  margin-right: 1.5rem;
+                  transform: translateY(-0.2rem);
+                  transition: 0.35s;
+                }
+              }
+            }
+
+            label {
+              color: $colorWhite;
+              font-size: 2rem;
+              font-family: $fontDefault;
+              font-weight: 100;
+              margin-bottom: 5rem;
+            }
+          }
+        }
+
+        .interestCheckBox {
+          font-size: 0;
+
+          .chkBox {
+            position: relative;
+
+            input[type="checkbox"] {
+              position: absolute;
+              width: 0;
+              height: 0;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              border: 0;
+
+              &:checked {
+                & + label {
+                  &:before {
+                    content: "";
+                    background-color: $colorPoint;
+                  }
+                }
+              }
+
+              + label {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                font-size: 1.6vmin;
+                color: $colorWhite;
+                width: 25%;
+                text-align: center;
+
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  width: 2rem;
+                  height: 2rem;
+                  line-height: 2rem;
+                  vertical-align: middle;
+                  background-color: $colorWhite;
+                  margin-right: 1rem;
+                  transform: translateY(-0.2rem);
+                  transition: 0.35s;
+                }
+              }
+            }
+
+            label {
+              color: $colorWhite;
+              font-family: $fontDefault;
+              font-weight: 100;
+              margin-bottom: 5rem;
+            }
+          }
+        }
+
+        input[type="submit"] {
+          margin: 5rem 0;
+          @include btn();
+          background-color: transparent;
+          cursor: pointer;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .join {
+    height: auto;
+  }
+
+  .joinBox {
+    display: none;
+  }
+
+  .joinBoxMo {
+    display: block;
+  }
+}
+
+@include mobile {
+  .joinBoxMo {
+  
+    h1 {
+      font-size: 4rem;
+    }
+  
+    form {
+
+  
+      ul {
+        li {
+          h2 {
+            font-size: 2.6rem;
+          }
+  
+          input {
+            padding-left: 1rem;
+          }
+  
+          .interestCheckBox {
+  
+            .chkBox {
+              position: relative;
+              display: flex;
+              flex-wrap: wrap;
+  
+              input[type="checkbox"] {
+                + label {
+                  font-size: 2rem;
+                  width: 100%;
+                  text-align: left;
+                }
+              }
+  
+              label {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+
+        }
       }
     }
   }
