@@ -2480,23 +2480,23 @@ aside .close {
     right: 3rem;
   }
 
-  .inner {
+  .gallery .inner {
     width: 100%;
     padding: 0 3rem;
   }
-  .inner #searchBox {
+  .gallery .inner #searchBox {
     flex-wrap: wrap-reverse;
   }
-  .inner #searchBox .left {
+  .gallery .inner #searchBox .left {
     width: 100%;
     text-align: center;
   }
-  .inner #searchBox .right {
+  .gallery .inner #searchBox .right {
     width: 100%;
     text-align: center;
     margin-bottom: 5rem;
   }
-  .inner #gallery .wrap #list li {
+  .gallery .inner #gallery .wrap #list li {
     width: 33.3333333333%;
   }
 }
@@ -2505,7 +2505,7 @@ aside .close {
     padding: 20vw;
   }
 
-  .inner #gallery .wrap #list li {
+  .gallery .inner #gallery .wrap #list li {
     width: 50%;
   }
 }
