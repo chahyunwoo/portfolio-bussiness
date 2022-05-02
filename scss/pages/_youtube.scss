@@ -30,7 +30,7 @@
           font-weight: 300;
           margin-bottom: 3rem;
         }
-        
+
         article {
           display: flex;
           justify-content: space-between;
@@ -114,7 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     .btnClose {
       position: absolute;
       font-size: 2rem;
@@ -122,6 +122,74 @@
       right: 5rem;
       color: $colorWhite;
       cursor: pointer;
+    }
+  }
+}
+
+@include tablet {
+  .youtube {
+    .inner {
+      width: 100%;
+      padding: 0 3rem;
+      text-align: center;
+
+      #youtube {
+        .headlineVideo {
+          h1 {
+            font-size: 3rem;
+          }
+
+          article {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .pic {
+              width: 100%;
+              margin-bottom: 5rem;
+            }
+
+            .con {
+              width: 100%;
+
+              h2 {
+                font-size: 2.5rem;
+              }
+
+              p {
+                font-size: 2rem;
+              }
+
+              span {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+
+        .videos {
+          justify-content: center;
+          gap: 5%;
+        }
+      }
+    }
+
+    figure.pop {
+      padding: 15vw;
+
+      .btnClose {
+        position: absolute;
+        top: auto;
+        bottom: 3rem;
+        right: 3rem;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .youtube {
+    figure.pop {
+      padding: 20vw;
     }
   }
 }

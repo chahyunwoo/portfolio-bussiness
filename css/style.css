@@ -2622,6 +2622,54 @@ aside .close {
   cursor: pointer;
 }
 
+@media (max-width: 1179px) {
+  .youtube .inner {
+    width: 100%;
+    padding: 0 3rem;
+    text-align: center;
+  }
+  .youtube .inner #youtube .headlineVideo h1 {
+    font-size: 3rem;
+  }
+  .youtube .inner #youtube .headlineVideo article {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .youtube .inner #youtube .headlineVideo article .pic {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .youtube .inner #youtube .headlineVideo article .con {
+    width: 100%;
+  }
+  .youtube .inner #youtube .headlineVideo article .con h2 {
+    font-size: 2.5rem;
+  }
+  .youtube .inner #youtube .headlineVideo article .con p {
+    font-size: 2rem;
+  }
+  .youtube .inner #youtube .headlineVideo article .con span {
+    font-size: 1.5rem;
+  }
+  .youtube .inner #youtube .videos {
+    justify-content: center;
+    gap: 5%;
+  }
+  .youtube figure.pop {
+    padding: 15vw;
+  }
+  .youtube figure.pop .btnClose {
+    position: absolute;
+    top: auto;
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+@media (max-width: 539px) {
+  .youtube figure.pop {
+    padding: 20vw;
+  }
+}
 .star {
   width: 1px;
   height: 1px;
