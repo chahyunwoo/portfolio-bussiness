@@ -1,0 +1,127 @@
+.youtube {
+  width: 100%;
+  background-color: $colorBlack;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+
+  .inner {
+    @include inner;
+
+    .youtubeTitle {
+      color: $colorWhite;
+      font-size: 8rem;
+      font-weight: 300;
+      text-align: center;
+      padding: 10rem 0;
+      border-bottom: 2px solid $colorPoint;
+    }
+
+    #youtube {
+      padding: 5rem 0;
+
+      .headlineVideo {
+        width: 100%;
+        padding-bottom: 5rem;
+        border-bottom: 1px solid $colorWhite;
+
+        h1 {
+          font-size: 5rem;
+          color: $colorPoint;
+          text-align: center;
+          font-weight: 300;
+          margin-bottom: 3rem;
+        }
+        
+        article {
+          display: flex;
+          justify-content: space-between;
+
+          .pic {
+            display: block;
+            border-radius: 3px;
+            width: 50%;
+            overflow: hidden;
+
+            img {
+              @include objectFit;
+            }
+          }
+
+          .con {
+            width: 40%;
+
+            h2 {
+              font-size: 3.5rem;
+              color: $colorWhite;
+            }
+
+            p {
+              margin: 3rem 0;
+              font-size: 2rem;
+              color: $colorWhite;
+            }
+
+            span {
+              font-size: 1.6rem;
+              color: $colorWhite;
+            }
+          }
+        }
+      }
+
+      .videos {
+        padding-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        article {
+          margin-bottom: 3rem;
+
+          .con {
+            margin-top: 2rem;
+
+            h2 {
+              color: $colorWhite;
+              margin-bottom: 1rem;
+              font-size: 2rem;
+            }
+
+            p {
+              color: $colorWhite;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+            }
+
+            span {
+              color: $colorWhite;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  figure.pop {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .btnClose {
+      position: absolute;
+      font-size: 2rem;
+      top: 5rem;
+      right: 5rem;
+      color: $colorWhite;
+      cursor: pointer;
+    }
+  }
+}
