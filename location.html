@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOCATION</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://kit.fontawesome.com/88f9bec3a6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe9bb0f994acd2d61111cc51afc90122"></script>
+  <script defer src="./js/anime.js"></script>
+  <script defer src="./js/main.js"></script>
+  <script defer src="./js/location.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner">
+      <h1>
+        Frederic Malle
+        <a href="index.html">
+          <img src="./images/Fredericmalle-logo.webp" alt="" />
+        </a>
+      </h1>
+
+      <nav class="menuWeb">
+        <ul id="gnb">
+          <li><a href="members.html">MEMBERS</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="location.html">LOCATION</a></li>
+        </ul>
+        <ul id="rnb">
+          <li><a href="#!">LOGIN</a></li>
+          <li><a href="join.html">JOIN</a></li>
+          <li><a href="#!">SEARCH</a></li>
+        </ul>
+      </nav>
+
+      <a href="#!" class="btnCall"><span>메뉴호출</span></a>
+
+      <nav class="menuMo">
+        <ul id="gnbMo">
+          <li><a href="members.html">MEMBERS</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="location.html">LOCATION</a></li>
+        </ul>
+        <ul id="gnbMoLogin">
+          <li><a href="#!">LOGIN</a></li>
+          <li><a href="join.html">JOIN</a></li>
+          <li><a href="#!">SEARCH</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="location">
+    <div class="inner">
+      <h1 class="locationTitle">LOCATION</h1>
+      <div id="map"></div>
+
+      <ul class="traffic">
+        <li><a href="#!">traffic info on</a></li>
+        <li class="on"><a href="#!">traffic info off</a></li>
+      </ul>
+
+      <ul class="branch">
+        <li class="on" data-index='0'><a href="#!">Gangnam</a></li>
+        <li data-index='1'><a href="#!">Yeouido</a></li>
+        <li data-index='2'><a href="#!">Apgujeong</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="inner">
+      <div class="footerTop">
+        <h1>
+          <a href="#!">
+            <img src="./images/Fredericmalle-logo.webp" alt="logo" />
+          </a>
+        </h1>
+        <ul>
+          <li><a href="#!">Policy</a></li>
+          <li><a href="#!">Terms</a></li>
+          <li><a href="#!">Customer</a></li>
+          <li><a href="#!">Contact Us</a></li>
+        </ul>
+      </div>
+      <address>
+        Shinsegae Department Gangman (2F), 176, Sinbanpo-ro, Seocho-gu, Seoul,
+        Republic Of Korea <br />
+        TEL : +82-2-3479-6258
+      </address>
+      <p>Copyright &copy; 2022 CHAHYUNWOO All Right Reserved</p>
+    </div>
+  </footer>
+
+  <div class="mousePointer"></div>
+
+  <button class="homeBtn"><i class="fa-solid fa-angle-up"></i></button>
+</body>
+
+</html>

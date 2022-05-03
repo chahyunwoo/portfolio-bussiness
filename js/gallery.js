@@ -48,7 +48,7 @@ input.addEventListener("keyup", (e) => {
 
     let galleryValue = document.querySelector(".galleryValue");
 
-    if (tag != "") {
+    if (tag !== "") {
       callData(url);
       galleryValue.innerText = tag;
     } else {
@@ -72,7 +72,7 @@ frame.addEventListener("click", (e) => {
 
   let target = e.target.closest(".item").querySelector(".thumb");
 
-  if (e.target == target) {
+  if (e.target === target) {
     let imgSrc = target.parentElement.getAttribute("href");
 
     let pop = document.createElement("aside");

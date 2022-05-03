@@ -186,7 +186,7 @@ h2 {
 }
 .header .inner .menuWeb #gnb li a {
   display: inline-block;
-  width: 196.6666666667px;
+  width: 236px;
   font-size: 1.6rem;
   margin-top: 1.25em;
   height: 4rem;
@@ -2546,6 +2546,11 @@ aside .close {
   display: flex;
   justify-content: space-between;
 }
+.youtube .inner #youtube .headlineVideo article:hover .con h2,
+.youtube .inner #youtube .headlineVideo article:hover .con p,
+.youtube .inner #youtube .headlineVideo article:hover .con span {
+  color: #d94423;
+}
 .youtube .inner #youtube .headlineVideo article .pic {
   display: block;
   border-radius: 3px;
@@ -2564,15 +2569,18 @@ aside .close {
 .youtube .inner #youtube .headlineVideo article .con h2 {
   font-size: 3.5rem;
   color: #fff;
+  transition: 0.35s;
 }
 .youtube .inner #youtube .headlineVideo article .con p {
   margin: 3rem 0;
   font-size: 2rem;
   color: #fff;
+  transition: 0.35s;
 }
 .youtube .inner #youtube .headlineVideo article .con span {
   font-size: 1.6rem;
   color: #fff;
+  transition: 0.35s;
 }
 .youtube .inner #youtube .videos {
   padding-top: 5rem;
@@ -2583,6 +2591,15 @@ aside .close {
 .youtube .inner #youtube .videos article {
   margin-bottom: 3rem;
 }
+.youtube .inner #youtube .videos article:hover .con h2 {
+  color: #d94423;
+}
+.youtube .inner #youtube .videos article:hover .con p {
+  color: #d94423;
+}
+.youtube .inner #youtube .videos article:hover .con span {
+  color: #d94423;
+}
 .youtube .inner #youtube .videos article .con {
   margin-top: 2rem;
 }
@@ -2590,15 +2607,18 @@ aside .close {
   color: #fff;
   margin-bottom: 1rem;
   font-size: 2rem;
+  transition: 0.35s;
 }
 .youtube .inner #youtube .videos article .con p {
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  transition: 0.35s;
 }
 .youtube .inner #youtube .videos article .con span {
   color: #fff;
   font-size: 1.4rem;
+  transition: 0.35s;
 }
 .youtube figure.pop {
   width: 100%;
@@ -2668,6 +2688,121 @@ aside .close {
 @media (max-width: 539px) {
   .youtube figure.pop {
     padding: 20vw;
+  }
+}
+.location {
+  width: 100%;
+  background-color: #0f0f0f;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+}
+.location .inner {
+  width: 1180px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+}
+.location .inner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .inner .locationTitle {
+  color: #fff;
+  font-size: 8rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 10rem 0;
+}
+.location .inner #map {
+  width: 100%;
+  height: 50rem;
+  border: 1px solid #fff;
+  margin-bottom: 2rem;
+}
+.location .inner .traffic {
+  float: left;
+}
+.location .inner .traffic li {
+  float: left;
+  margin-right: 2rem;
+}
+.location .inner .traffic li a {
+  display: block;
+  width: 20rem;
+  height: 4rem;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  color: #0f0f0f;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.location .inner .traffic li.on a {
+  background-color: #d94423;
+  color: #fff;
+  border: 1px solid #d94423;
+}
+.location .inner .branch {
+  float: right;
+}
+.location .inner .branch li {
+  float: left;
+  margin-left: 1rem;
+}
+.location .inner .branch li a {
+  display: block;
+  width: 20rem;
+  height: 4rem;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  color: #0f0f0f;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.location .inner .branch li.on a {
+  background-color: #d94423;
+  color: #fff;
+  border: 1px solid #d94423;
+}
+
+@media (max-width: 1179px) {
+  .location .inner {
+    width: 100%;
+    padding: 0 3rem 10rem 3rem;
+  }
+  .location .inner #map {
+    height: 30rem;
+  }
+  .location .inner .traffic {
+    width: 100%;
+  }
+  .location .inner .traffic li {
+    width: 49.5%;
+    margin-right: 1%;
+  }
+  .location .inner .traffic li:last-child {
+    margin-right: 0;
+  }
+  .location .inner .traffic li a {
+    width: 100%;
+  }
+  .location .inner .branch {
+    margin-top: 3rem;
+    width: 100%;
+  }
+  .location .inner .branch li {
+    margin-left: 0;
+    margin-right: 1%;
+    width: 32.6666666667%;
+  }
+  .location .inner .branch li:last-child {
+    margin-right: 0;
+  }
+  .location .inner .branch li a {
+    width: 100%;
   }
 }
 .star {
