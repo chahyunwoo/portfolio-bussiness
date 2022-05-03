@@ -1,258 +1,256 @@
 .header {
-  width: 100%;
-  border-bottom: 1px solid $colorBlack;
-  font-family: $fontNav;
-  background-color: $colorBlack;
-  position: relative;
+	width: 100%;
+	border-bottom: 1px solid $colorBlack;
+	font-family: $fontNav;
+	background-color: $colorBlack;
+	position: relative;
 
-  .inner {
-    @include inner;
-    height: 12rem;
-    position: relative;
+	.inner {
+		@include inner;
+		height: 12rem;
+		position: relative;
 
-    h1 {
-      padding-top: 30px;
-      text-align: center;
-      font-size: 0;
-    }
+		h1 {
+			padding-top: 30px;
+			text-align: center;
+			font-size: 0;
+		}
 
-    .menuWeb {
-      #gnb {
-        width: 100%;
-        @include clear;
+		.menuWeb {
+			#gnb {
+				width: 100%;
+				@include clear;
 
-        li {
-          float: left;
+				li {
+					float: left;
 
-          a {
-            display: inline-block;
-            width: calc(1180px / 5);
-            font-size: 1.6rem;
-            margin-top: 1.25em;
-            height: 4rem;
-            line-height: 4rem;
-            text-align: center;
-            color: $colorWhite;
-            transition: 0.35s;
+					a {
+						display: inline-block;
+						width: calc(1180px / 5);
+						font-size: 1.6rem;
+						margin-top: 1.25em;
+						height: 4rem;
+						line-height: 4rem;
+						text-align: center;
+						color: $colorWhite;
+						transition: 0.35s;
 
-            &:hover {
-              color: $colorPoint;
-            }
-          }
-        }
-      }
+						&:hover {
+							color: $colorPoint;
+						}
+					}
+				}
+			}
 
-      #rnb {
-        position: absolute;
-        right: 4rem;
-        top: 3rem;
-        @include clear;
+			#rnb {
+				position: absolute;
+				right: 4rem;
+				top: 3rem;
+				@include clear;
 
-        li {
-          float: left;
-          margin-right: 2rem;
+				li {
+					float: left;
+					margin-right: 2rem;
 
-          &:last-of-type {
-            margin-right: 0;
-          }
+					&:last-of-type {
+						margin-right: 0;
+					}
 
-          a {
-            font-size: 1.4rem;
-            line-height: 1;
-            color: $colorWhite;
-            opacity: 0.5;
-            transition: 0.35s;
-            display: inline-block;
-            position: relative;
+					a {
+						font-size: 1.4rem;
+						line-height: 1;
+						color: $colorWhite;
+						opacity: 0.5;
+						transition: 0.35s;
+						display: inline-block;
+						position: relative;
 
-            &:after {
-              content: "";
-              position: absolute;
-              width: 1px;
-              height: 1rem;
-              background-color: $colorWhite;
-              opacity: 0.5;
-              margin-left: 1rem;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
+						&:after {
+							content: '';
+							position: absolute;
+							width: 1px;
+							height: 1rem;
+							background-color: $colorWhite;
+							opacity: 0.5;
+							margin-left: 1rem;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+					}
 
-          &:last-of-type {
-            a {
-              &:after {
-                display: none;
-              }
-            }
-          }
+					&:last-of-type {
+						a {
+							&:after {
+								display: none;
+							}
+						}
+					}
 
-          &:hover {
-            a {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
+					&:hover {
+						a {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
 
-    .btnCall {
-      position: fixed;
-      right: 5rem;
-      top: 4rem;
-      width: 2rem;
-      height: 2rem;
-      display: none;
-      z-index: 50;
-      transition: 0.35s;
-      mix-blend-mode: difference;
+		.btnCall {
+			position: fixed;
+			right: 5rem;
+			top: 4rem;
+			width: 2rem;
+			height: 2rem;
+			display: none;
+			z-index: 50;
+			transition: 0.35s;
+			mix-blend-mode: difference;
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: $colorWhite;
-        top: 0;
-        left: 0;
-        transition: 0.35s;
-      }
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: $colorWhite;
+				top: 0;
+				left: 0;
+				transition: 0.35s;
+			}
 
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: $colorWhite;
-        bottom: 0;
-        left: 0;
-        transition: 0.35s;
-      }
+			&:after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: $colorWhite;
+				bottom: 0;
+				left: 0;
+				transition: 0.35s;
+			}
 
-      span {
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: $colorWhite;
-        top: 50%;
-        left: 0;
-        margin-top: -1px;
-        text-indent: -9999px;
-        transition: 0.35s;
-      }
+			span {
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: $colorWhite;
+				top: 50%;
+				left: 0;
+				margin-top: -1px;
+				text-indent: -9999px;
+				transition: 0.35s;
+			}
 
-      &.on {
-        &:before {
-          top: 50%;
-          margin-top: -1px;
-          transform: rotate(45deg);
-        }
+			&.on {
+				&:before {
+					top: 50%;
+					margin-top: -1px;
+					transform: rotate(45deg);
+				}
 
-        &:after {
-          bottom: 50%;
-          margin-bottom: -1px;
-          transform: rotate(-45deg);
-        }
+				&:after {
+					bottom: 50%;
+					margin-bottom: -1px;
+					transform: rotate(-45deg);
+				}
 
-        span {
-          transform: translateX(100%);
-          opacity: 0;
-        }
-      }
-    }
+				span {
+					transform: translateX(100%);
+					opacity: 0;
+				}
+			}
+		}
 
-    /* MOBILE */
+		/* MOBILE */
 
-    .menuMo {
-      width: 27rem;
-      height: 100vh;
-      background-color: $colorBlack;
-      position: fixed;
-      top: 0;
-      right: -270px;
-      padding: 5rem 3rem;
-      z-index: 9;
-      transition: 0.35s;
-      @include clear;
+		.menuMo {
+			width: 27rem;
+			height: 100vh;
+			background-color: $colorBlack;
+			position: fixed;
+			top: 0;
+			right: -270px;
+			padding: 5rem 3rem;
+			z-index: 9;
+			transition: 0.35s;
+			@include clear;
 
-      &.on {
-        right: 0;
-      }
+			&.on {
+				right: 0;
+			}
 
-      h1 {
-        padding-bottom: 5rem;
-        border-bottom: 1px solid $colorWhite;
-      }
+			h1 {
+				padding-bottom: 5rem;
+				border-bottom: 1px solid $colorWhite;
+			}
 
-      #gnbMo {
-        li {
-          a {
-            display: inline-block;
-            width: 100%;
-            padding: 3rem 0;
-            border-bottom: 1px solid $colorWhite;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 1;
-            font-family: $fontNav;
-            color: $colorWhite;
-            text-align: center;
-          }
-        }
-      }
+			#gnbMo {
+				li {
+					a {
+						display: inline-block;
+						width: 100%;
+						padding: 3rem 0;
+						border-bottom: 1px solid $colorWhite;
+						font-weight: bold;
+						font-size: 14px;
+						line-height: 1;
+						font-family: $fontNav;
+						color: $colorWhite;
+						text-align: center;
+					}
+				}
+			}
 
-      #gnbMoLogin {
-        @include clear;
-        margin-top: 3rem;
-        float: right;
+			#gnbMoLogin {
+				@include clear;
+				margin-top: 3rem;
+				float: right;
 
-        li {
-          float: left;
-          margin-right: 2rem;
-          position: relative;
-          
-          &:last-of-type {
-            margin-right: 0;
+				li {
+					float: left;
+					margin-right: 2rem;
+					position: relative;
 
-            &:after {
-              display: none;
-            }
-          }
+					&:last-of-type {
+						margin-right: 0;
 
-          &:after {
-            content: '';
-            position: absolute;
-            width: 1px;
-            height: 1rem;
-            transform: translateY(0.4rem);
-            background-color: $colorWhite;
-            margin-left: 1rem;
-          }
+						&:after {
+							display: none;
+						}
+					}
 
-          a {
-            color: $colorWhite;
-            font-size: 1.4rem;
-          }
-        }
-      }
-    }
-  }
+					&:after {
+						content: '';
+						position: absolute;
+						width: 1px;
+						height: 1rem;
+						transform: translateY(0.4rem);
+						background-color: $colorWhite;
+						margin-left: 1rem;
+					}
+
+					a {
+						color: $colorWhite;
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include tablet {
-  .header {
-    .inner {
-      width: 100%;
-      height: 10rem;
+	.header {
+		.inner {
+			width: 100%;
+			height: 10rem;
 
-      .menuWeb {
-        display: none;
-      }
+			.menuWeb {
+				display: none;
+			}
 
-      .btnCall {
-        display: block;
-      }
-    }
-  }
+			.btnCall {
+				display: block;
+			}
+		}
+	}
 }
-
-
