@@ -744,6 +744,10 @@
       }
     }
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 
 @include mobile {
@@ -801,6 +805,13 @@
 
   .policy {
     .inner {
+      .pointTitleMo {
+        font-size: 2rem;
+
+        span {
+          font-size: 2rem;
+        }
+      }
       .wrap {
         .pic {
           width: 60%;

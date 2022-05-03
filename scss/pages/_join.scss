@@ -433,6 +433,10 @@
   .joinBoxMo {
     display: block;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 
 @include mobile {

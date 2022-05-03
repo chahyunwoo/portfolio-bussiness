@@ -216,10 +216,20 @@
 			}
 		}
 	}
+
+  .mousePointer {
+    display: none;
+  }
 }
 
 @include mobile {
 	.youtube {
+    .inner {
+      .youtubeTitle {
+        font-size: 5rem;
+      }
+    }
+
 		figure.pop {
 			padding: 20vw;
 		}

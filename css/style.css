@@ -856,6 +856,10 @@ h2 {
   .community .inner .paginationMo {
     display: block;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 @media (max-width: 539px) {
   .communityVisual {
@@ -865,8 +869,13 @@ h2 {
     width: 100%;
   }
   .communityVisual .inner .title {
+    margin-top: 5rem;
     padding-bottom: 2rem;
-    font-size: 6.5rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .communityVisual .inner .subTitle {
+    font-size: 2.5rem;
   }
 
   .community .inner .tableMo tbody .title td span {
@@ -1534,6 +1543,10 @@ h2 {
   .policy .inner .wrap .logo {
     margin-top: 6em;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 @media (max-width: 539px) {
   .feature .inner .wrap article {
@@ -1563,6 +1576,12 @@ h2 {
     font-size: 2rem;
   }
 
+  .policy .inner .pointTitleMo {
+    font-size: 2rem;
+  }
+  .policy .inner .pointTitleMo span {
+    font-size: 2rem;
+  }
   .policy .inner .wrap .pic {
     width: 60%;
   }
@@ -1943,6 +1962,10 @@ h2 {
   .joinBoxMo {
     display: block;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 @media (max-width: 539px) {
   .joinBoxMo h1 {
@@ -2257,13 +2280,22 @@ h2 {
   .membersMo {
     display: block;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 @media (max-width: 539px) {
   .membersVisual .inner {
     padding-bottom: 3rem;
   }
   .membersVisual .inner .title {
+    margin-top: 5rem;
     padding-bottom: 3rem;
+    font-size: 4rem;
+  }
+  .membersVisual .inner .subTitle {
+    font-size: 2.5rem;
   }
 
   .membersMo {
@@ -2499,12 +2531,25 @@ aside .close {
   .gallery .inner #gallery .wrap #list li {
     width: 33.3333333333%;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 @media (max-width: 539px) {
   aside {
     padding: 20vw;
   }
 
+  .gallery .inner .galleryTitle {
+    font-size: 5rem;
+  }
+  .gallery .inner #gallery #searchBox .right h2 {
+    font-size: 1.6rem;
+  }
+  .gallery .inner #gallery #searchBox .right input {
+    margin-bottom: 2rem;
+  }
   .gallery .inner #gallery .wrap #list li {
     width: 50%;
   }
@@ -2684,8 +2729,15 @@ aside .close {
     bottom: 3rem;
     right: 3rem;
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 @media (max-width: 539px) {
+  .youtube .inner .youtubeTitle {
+    font-size: 5rem;
+  }
   .youtube figure.pop {
     padding: 20vw;
   }
@@ -2803,6 +2855,15 @@ aside .close {
   }
   .location .inner .branch li a {
     width: 100%;
+  }
+
+  .mousePointer {
+    display: none;
+  }
+}
+@media (max-width: 539px) {
+  .location .inner .locationTitle {
+    font-size: 5rem;
   }
 }
 .star {

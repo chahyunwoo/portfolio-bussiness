@@ -128,4 +128,18 @@
       }
     }
   }
+
+  .mousePointer {
+    display: none;
+  }
+}
+
+@include mobile {
+  .location {
+    .inner {
+      .locationTitle {
+        font-size: 5rem;
+      }
+    }
+  }
 }

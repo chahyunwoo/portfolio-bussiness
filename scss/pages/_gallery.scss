@@ -267,6 +267,10 @@ aside {
       }
     }
   }
+
+  .mousePointer {
+    display: none;
+  }
 }
 
 @include mobile {
@@ -276,7 +280,22 @@ aside {
 
   .gallery {
     .inner {
+      .galleryTitle {
+        font-size: 5rem;
+      }
       #gallery {
+        #searchBox {
+          .right {
+            h2 {
+              font-size: 1.6rem;
+            }
+
+            input {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+
         .wrap {
           #list {
             li {
